@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/models/Movie.dart';
+import 'package:movie_app/models/movie.dart';
 import 'package:movie_app/widgets/movie_card.dart';
 
 final List<Movie> movies = [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/models/Movie.dart';
+import 'package:movie_app/models/movie.dart';
 import 'package:movie_app/screens/movie_details_screen.dart';
 
 class MovieCard extends StatelessWidget {
@@ -19,18 +19,22 @@ class MovieCard extends StatelessWidget {
         );
       },
       child: Card(
-        clipBehavior:
-            Clip.antiAlias, // Ensures the image is clipped to the card's border
+        clipBehavior: Clip.antiAlias,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-
           children: [
-            Expanded(child: Image.network(movie.imageUrl, fit: BoxFit.cover)),
+            Expanded(
+              child: Image.network(
+                movie.imageUrl,
+                fit: BoxFit.cover,
+              ),
+            ),
             Padding(
-              padding: EdgeInsetsGeometry.only(top: 8.0, bottom: 8.0),
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: Text(
                 movie.title,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),
