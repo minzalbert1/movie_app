@@ -23,12 +23,16 @@ class MovieCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              child: Image.network(
-                movie.imageUrl,
-                fit: BoxFit.cover,
-              ),
-            ),
+           Expanded(
+           child: Hero(
+           tag: movie.title,
+           child: Image.network(
+           movie.imageUrl,
+          fit: BoxFit.cover,
+    ),
+  ),
+),
+
             Padding(
               padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: Text(
